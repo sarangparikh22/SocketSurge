@@ -1,6 +1,6 @@
 **Context:**  [SocketDst.sol](https://github.com/SocketDotTech/socket-DL/blob/master/contracts/socket/SocketDst.sol#L190)
 
-**Severity:** Medium
+**Severity:** Low
 
 **Description:**
 The contract `SocketDst` uses try-catch mechanism to catch the errors while executing the call at the dst chain. However, this might not be fully implemented properly, as passing an EOA or contract with 0 code size (at that moment) will revert. 
