@@ -5,7 +5,7 @@
 **Description:**
 The contract `SocketDst` uses try-catch mechanism to catch the errors while executing the call at the dst chain. However, this might not be fully implemented properly, as passing an EOA or contract with 0 code size (at that moment) will revert. 
 
-- At the execute function `localPlug_` is called with try-catch.
+- At the `_execute` function `localPlug_` is called with try-catch.
 - At try-catch when we call an EOA or contrct with 0 code size (at that moment) will revert the entire transaction, preventing the execution of the entire transaction, without registering the error in the catch condition. 
 
 ```solidity
